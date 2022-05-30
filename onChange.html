@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <title>On Change</title>
+</head>
+
+<body>
+    <section class="container">
+        <div class="row">
+            <div class="col m-12">
+                <h1>On Change Select Option "Escolhento Opções"</h1>             
+                 
+                <select onchange="minhaFuncao(this.value)" > <!--Estou chamando a função aqui e pegando o valor das seleções -->
+                    <option value="1">JavaScript</option>              <!--dessas options quando escolhidas-->
+                    <option value="2">Python</option>
+                    <option value="3">C#</option>
+                </select>
+                 
+            </div>
+        </div>
+    </section>
+</body>
+ 
+<script>
+    function minhaFuncao(valor){ //coloquei um parâmetro na função e chamei de valor que vai receber de onchange
+      console.log(valor)
+     //alert(valor)
+    }
+</script>
+
+
+</html>
