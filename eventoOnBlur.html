@@ -1,0 +1,41 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <title>evento OnBlur</title>
+    </head>
+
+    <body>
+        <section class="container">
+            <div class="row">
+                <div class="col m-12">
+                    <h1>Evento OnBlur</h1>             
+                    <input type="text" placeholder="Informe um Texto" id="valor"  onblur="aperte()"><!--chamando a função no onblur -->
+                    <div id="resultado"></div> <!--pegando esse id com document.querySelector().innerHTML = valor-->
+
+                </div>
+            </div>
+        </section>
+    </body>
+    <script>
+     
+     document.getElementById('valor').focus();  
+    function aperte(){
+
+    var valor = document.getElementById('valor').value; // Aqui não preciso colocar o # para pegar o elemento
+    if(valor){
+        document.getElementById('resultado').innerHTML= valor;//<--Mostra o valor coletado na variável direto no id resultado na div no html
+    }else{
+        document.getElementById('resultado').innerHTML= "Campo vazio !"
+    }
+
+   
+    }
+
+    </script>
+
+    </html>
